@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body class="">
+  <div class="container">
+  <div class="row  justify-content-center align-self-center py-5 ">
+    <div class="col-md-6 text-left bg-white rounded shadow py-3 border ">
+
+
+<form [formGroup]='myReactiveForm ' (ngSubmit)="onSubmit()">
+
+  <div formGroupName='userDetail'>
+
+      <div class="form-group mt-2">
+        <label for="username" class="form-label">User Name*</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter Name"
+        name="username" formControlName="username" >
+       
+        
+        <small class="text-danger" *ngIf="!myReactiveForm.get('userDetail.username').valid && myReactiveForm.get('userDetail.username').touched"
+        >
+     
+        <span *ngIf="myReactiveForm.get('userDetail.username').errors['required']">Username is Required</span>
+        <span *ngIf="myReactiveForm.get('userDetail.username').errors?.pattern">Username is not Allowed</span>
+
+      </small>
+       </div>
+
+      <div class="form-group mt-2">
+        <label for="email" class="form-label">Email*</label>
+        <input type="email" class="form-control" id="email" name="email"  placeholder="Enter Email" 
+        formControlName="email" >
+        <small class="text-danger" *ngIf="!myReactiveForm.get('userDetail.email').valid && myReactiveForm.get('userDetail.email').touched">
+        
+
+        <span *ngIf="myReactiveForm.get('userDetail.email').errors['required']">Email is Required</span>
+        <span *ngIf="myReactiveForm.get('userDetail.email').errors?.pattern">Email address is invalid </span> 
+      
+      </small>
+       
+      </div>
+
+     
+
+       <div class="form-group mt-2">
+        <label  class="form-label">password</label>
+        <input type="password" class="form-control" id="password" name="password"  placeholder="Enter Password" 
+        formControlName="password" >
+        <small class="text-danger" *ngIf="!myReactiveForm.get('userDetail.password').valid && myReactiveForm.get('userDetail.password').touched">
+        
+
+        <span *ngIf="myReactiveForm.get('userDetail.password').errors['required']">Password is Required </span>
+        <span *ngIf="myReactiveForm.get('userDetail.password').errors['minlength']">Password must be 8 Character </span> 
+       </small>
+       </div>
+
+       <div class="form-group mt-2">
+        <label  class="form-label">Contact</label>
+        <input type="contact"  class="form-control" id="contact" name="contact"  placeholder="Enter Contact Number" 
+        formControlName="contact" >
+        <small class="text-danger" *ngIf="!myReactiveForm.get('userDetail.contact').valid && myReactiveForm.get('userDetail.contact').touched">
+        
+
+        <span *ngIf="myReactiveForm.get('userDetail.contact').errors['required']">Contact  is Required </span>
+        <span *ngIf="myReactiveForm.get('userDetail.contact').errors['minlength']">Contact must be 10 Digit </span> 
+       </small>
+       </div>
+
+      
+
+
+
+
+    </div>
+
+     <div class=" form-group py-3 ">
+        <label for="course ">Select Course</label>
+        <select class="form-select mt-2" id="course " formControlName="course" aria-placeholder="Course to be Selected" >
+            <option value="Angular"> Angular</option>
+            <option value="React"> React</option>
+            <option value="Android"> Android</option>
+            <option value="Angular"> Flutter</option>
+        </select>
+      </div>
+
+      <!-- <div class="form-group" >
+        <label>Skills</label> -->
+        <!-- <ng-container  *ngFor="let skill of myReactiveForm.get('skills')['controls'] ; index as i" > -->
+        <!-- <input type="text " class="form-control mt-2" id="skills" placeholder="Add Skills"
+        name="username" formControlName="" > -->
+
+      <!-- </ng-container> -->
+        <!-- <button class="btn btn-light btn-sm mt-3 btn-add"><i>+</i> Add Skills</button> -->
+        
+      
+      <!-- </div> -->
+  
+   
+    <button type="submit " class="btn btn-success top" >Submit</button>
+  </form>
+</div>
+</div>
+
+</div>
+
+  
+</body>
+</html>

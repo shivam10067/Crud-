@@ -1,0 +1,81 @@
+body,html{
+    height: 100vh;
+    background-color: #98AFC7;
+  
+}
+
+
+input.ng-touched.ng-invalid
+
+{
+    border: 2px solid red;
+    border-radius: 4px;
+    
+}
+
+input.ng-touched.ng-valid
+
+{
+    border: 2px solid rgb(60, 255, 0);
+    border-radius: 4px;
+    
+}
+
+input[type=text ] {
+    border: 2px solid rgb(10, 10, 10);
+    border-radius: 4px;
+  }
+
+  input[type=email ] {
+    border: 2px solid rgb(12, 12, 12);
+    border-radius: 4px;
+  }
+  input[type=password ] {
+    border: 2px solid rgb(7, 7, 7);
+    border-radius: 4px;
+  }
+
+ 
+
+  input[type=contact ] {
+    border: 2px solid rgb(7, 7, 7);
+    border-radius: 4px;
+  }
+
+  .form-select
+  {
+    border: 2px solid rgb(7, 7, 7);
+    border-radius: 4px;
+
+  }
+.top
+{
+    margin-top: 1rem;
+}
+
+.btn-add
+{
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(65, 58, 58);
+}
+.btn-add i{
+   display: inline-block;
+   font-size: 25px;
+   position: relative;
+   
+   margin-right: 3px;
+   line-height: 12px;
+}
+.btn-add:hover
+{
+    border: 1px solid rgb(8, 74, 117);
+    background: white;
+    color: 1px solid rgb(8, 74, 117);;
+}
+
+::placeholder {
+    color: rgb(46, 147, 194);
+    opacity: 1;
+}
+  

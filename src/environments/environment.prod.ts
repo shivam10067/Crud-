@@ -1,3 +1,3 @@
 export const environment = {
-  production: true
+  baseurl:'http://www.appgrowthcompany.com:5069/api/v1/employee'
 };
